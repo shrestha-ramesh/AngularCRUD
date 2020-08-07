@@ -37,6 +37,37 @@
         </div>
       </div>
     </form>
+    <h1>Read Data & Delete Data:</h1>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th width=400>Name</th>
+          <th width=400>Quantity</th>
+          <th width=400>Price</th>
+          <th width=400>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i=index">
+          <td>{{product.name}}</td>
+          <td>{{product.qty}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            <a class="btn btn-success"(click)="editProduct(i)">Edit</a>
+            <a class="btn btn-danger"(click)="deleteProduct(i)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Update Data:</h1>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model2.name" placeholder="Enter product name">
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 <router-outlet></router-outlet>
