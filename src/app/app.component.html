@@ -9,5 +9,34 @@
       </div>
     </div>
   </div>
+  <div class="clearfix">
+    <hr>
+    <h1>Create Data:</h1>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model1.name" placeholder="Enter product name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="qty">Quantity:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="qty" name="qty" [(ngModel)]="model1.qty" placeholder="Enter product quantity">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="price">Price:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="price" name="price" [(ngModel)]="model1.price" placeholder="Enter product price">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-success" (click)="addProduct()">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 <router-outlet></router-outlet>
