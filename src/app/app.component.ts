@@ -24,8 +24,17 @@ export class AppComponent {
   editProduct(k){
     this.model2.name=this.products[k].name;
     this.model2.qty=this.products[k].qty;
-    this.model1.price=this.products[k].price;
+    this.model2.price=this.products[k].price;
     this.myValue=k;
+  }
+  updateProduct(){
+    let k= this.myValue;
+    for(let i=0; i<this.products.length;i++){
+      if(i==k){
+        this.products[i]=this.model2;
+        this.model2={};
+      }
+    }
   }
   addProduct(){
     this.products.push(this.model1);
