@@ -33,6 +33,7 @@ export class AppComponent {
       if(i==k){
         this.products[i]=this.model2;
         this.model2={};
+        this.msg="Record is successfully updated......";
       }
     }
   }
