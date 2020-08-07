@@ -1,6 +1,13 @@
 <div class="container">
-  <div>
-    
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="text-center" style="width: 1200px; color: red; margin: 10px 10px 10px;">{{title}}</h1>
+    </div>
+    <div class="col-md-4">
+      <div class="alert alert-success alert-dismissable" *ngIf="msg">
+        <a href="#" class="close" (click)="clickMe()">&times;</a>{{msg}}
+      </div>
+    </div>
   </div>
 </div>
 <router-outlet></router-outlet>
